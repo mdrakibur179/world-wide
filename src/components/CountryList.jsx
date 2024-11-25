@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
 
 import CountryItem from "./CountryItem";
@@ -24,7 +25,7 @@ function CountryList({ cities, isLoading }) {
   return (
     <ul className={styles.countryList}>
       {countries.map((country) => (
-        <CountryItem key={cities.id} />
+        <CountryItem country={country} key={country.country} />
       ))}
     </ul>
   );
